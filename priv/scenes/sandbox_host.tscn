@@ -1,0 +1,25 @@
+; RFD 2149: Godot host scene for OpenPLC v4's compiled RECTGTN plan.
+; The `Sandbox` node type comes from the `godot-sandbox` addon
+; (libriscv/godot-sandbox, MIT). It loads a `.riscv` shared object
+; at _ready and invokes `on_tick` every frame via _process(delta).
+;
+; The `TaskweftBridge` node is a companion script that speaks the
+; ElixirBus contract (`send_event`, receive `request`) with LibGodot's
+; NIF, exposes `get_var` over that bus, and forwards it into the
+; sandbox as `strucpp_get_var(name)`.
+
+[gd_scene load_steps=3 format=3 uid="uid://taskweft_sandbox_host"]
+
+[ext_resource type="Script" path="res://scripts/taskweft_bridge.gd" id="1_bridge"]
+
+[node name="Root" type="Node"]
+
+[node name="Sandbox" type="Sandbox" parent="."]
+; program path is set by TaskweftBridge from the --taskweft-plan CLI arg
+; so the same scene ships for every RECTGTN plan.
+max_memory_mb = 32
+max_instructions_per_frame = 1000000
+
+[node name="TaskweftBridge" type="Node" parent="."]
+script = ExtResource("1_bridge")
+sandbox_path = NodePath("../Sandbox")

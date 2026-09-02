@@ -1,0 +1,10 @@
+; RFD 2149 minimum Godot project for the taskweft-godot-sandbox integration test.
+config_version=5
+
+[application]
+config/name="taskweft_sandbox_host"
+run/main_scene="res://sandbox_host.tscn"
+config/features=PackedStringArray("4.5")
+
+[editor_plugins]
+enabled=PackedStringArray("res://addons/godot_sandbox/plugin.cfg")

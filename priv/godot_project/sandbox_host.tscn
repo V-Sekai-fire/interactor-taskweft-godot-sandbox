@@ -1,0 +1,17 @@
+; RFD 2149 host scene: Sandbox node loads a RISC-V program (either
+; RECTGTN-compiled or the Godot Sandbox v0.54 gdscript.elf stand-in
+; while OpenPLC Editor toolchain is not present).
+
+[gd_scene load_steps=2 format=3 uid="uid://taskweft_sandbox_host"]
+
+[ext_resource type="Script" path="res://scripts/taskweft_bridge.gd" id="1_bridge"]
+
+[node name="Root" type="Node"]
+
+[node name="Sandbox" type="Sandbox" parent="."]
+max_refs = 100
+memory_max = 32
+
+[node name="TaskweftBridge" type="Node" parent="."]
+script = ExtResource("1_bridge")
+sandbox_path = NodePath("../Sandbox")
