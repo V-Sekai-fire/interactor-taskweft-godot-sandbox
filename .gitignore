@@ -10,3 +10,5 @@ build/
 priv/*.so
 priv/*.dylib
 priv/*.dll
+priv/godot_project/plans/*.sgd
+priv/godot_project/plans/gen/
