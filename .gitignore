@@ -12,3 +12,4 @@ priv/*.dylib
 priv/*.dll
 priv/godot_project/plans/*.sgd
 priv/godot_project/plans/gen/
+priv/godot_project/udon/gen/
