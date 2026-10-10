@@ -19,4 +19,4 @@ The tests run against a mock engine adapter unless the real engine connector is 
 
 ## Licence
 
-The source files carry MIT SPDX headers; the repository has no licence file.
+MIT. See [LICENSE](LICENSE).
