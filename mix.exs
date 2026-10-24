@@ -21,7 +21,7 @@ defmodule TaskweftGodotSandbox.MixProject do
   # lib_godot_connector needs libgodot.dylib pre-built and drives a CMake
   # step that fetches godot-cpp. That is a developer environment concern,
   # not something every taskweft workspace can absorb, so the dep is opt-in:
-  # set TASKWEFT_ENABLE_LIBGODOT=1 after the bootstrap in RFD 2149's DETAILS.
+  # set TASKWEFT_ENABLE_LIBGODOT=1 after the bootstrap in RFD66606-2149's DETAILS.
   # Without it, this project compiles and tests run against the Mock adapter
   # under `lib/taskweft_godot_sandbox/lib_godot/mock.ex`.
   defp deps do

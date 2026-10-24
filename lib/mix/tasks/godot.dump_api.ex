@@ -11,7 +11,7 @@ defmodule Mix.Tasks.Godot.DumpApi do
 
   Precision (`single` vs `double`) tracks the sandbox `.so`/`.dll`
   the addon selected at project load; the emitted header goes into
-  a sibling filename so RFD 2154 can consume both when both are
+  a sibling filename so RFD66606-2154 can consume both when both are
   built.
 
       mix godot.dump_api

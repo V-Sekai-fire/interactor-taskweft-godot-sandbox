@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-# Companion script for `sandbox_host.tscn` (RFD 2149).
+# Companion script for `sandbox_host.tscn` (RFD66606-2149).
 # Reads --taskweft-plan CLI arg, points the Sandbox node at it, and
 # bridges ElixirBus messages into `strucpp_get_var(name)` calls on
 # the compiled RECTGTN program.

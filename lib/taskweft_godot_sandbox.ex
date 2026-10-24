@@ -3,7 +3,7 @@
 
 defmodule TaskweftGodotSandbox do
   @moduledoc """
-  Public facade for RFD 2149's OpenPLC-v4-into-Godot-Sandbox
+  Public facade for RFD66606-2149's OpenPLC-v4-into-Godot-Sandbox
   execution path. `start_link/1` boots an embedded Godot process
   loaded with the Sandbox host scene and the given `.riscv` plan;
   `tick/0` advances one Godot frame (one FBD scan); `get_var/1`
@@ -15,7 +15,7 @@ defmodule TaskweftGodotSandbox do
 
   Tests run against the Mock adapter by default; a real Godot needs
   `TASKWEFT_ENABLE_LIBGODOT=1` at mix compile time and a built
-  `libgodot.dylib` under `priv/`. See RFD 2149's DETAILS for the
+  `libgodot.dylib` under `priv/`. See RFD66606-2149's DETAILS for the
   bootstrap.
   """
 

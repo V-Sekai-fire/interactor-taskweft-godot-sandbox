@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: MIT
-# RFD 2149 host script: point the Sandbox at plans/gdscript.elf (godot-
+# RFD66606-2149 host script: point the Sandbox at plans/gdscript.elf (godot-
 # sandbox v0.54's SafeGDScript-compiled RISC-V binary) as a
 # demonstration that Axis 3 (Godot Sandbox loads a .riscv and ticks it)
-# works end-to-end. A real RECTGTN plan compiled via RFD 2145 will
+# works end-to-end. A real RECTGTN plan compiled via RFD66606-2145 will
 # replace the path but the shape stays the same.
 extends Node
 
@@ -15,7 +15,7 @@ func _ready() -> void:
 	if sandbox_path != NodePath():
 		_sandbox = get_node_or_null(sandbox_path)
 	if _sandbox:
-		# RFD 2153 stage 1: prefer the Lean-emitted ELF when present,
+		# RFD66606-2153 stage 1: prefer the Lean-emitted ELF when present,
 		# fall back to the godot-sandbox sample. The Lean ELF ecalls
 		# SYS_exit(42); libriscv should treat that as a clean exit
 		# rather than a crash. Presence in the trace = the Sandbox

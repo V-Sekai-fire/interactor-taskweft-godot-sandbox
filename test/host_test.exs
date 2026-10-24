@@ -3,7 +3,7 @@
 
 defmodule TaskweftGodotSandbox.HostTest do
   @moduledoc """
-  Smoke test for RFD 2149. Uses the Mock adapter so no real Godot
+  Smoke test for RFD66606-2149. Uses the Mock adapter so no real Godot
   boots. Verifies the Host GenServer walks the lifecycle
   (create → subscribe → start → iterate → request → shutdown) in the
   order LibGodot expects.
