@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 # Runs `Sandbox.generate_api("cpp", "", true)` once and writes the
-# result under `user://` for the FBD compiler (RFD 2154 differential)
+# result under `user://` for the FBD compiler (RFD66606-2154 differential)
 # to consume as its C++ target header. Sandbox emits one `struct <Class>
 # : parent { PROPERTY(...); METHOD(...); }` per ClassDB entry, argument
 # names included. The Rust and Zig halves ship hand-maintained under

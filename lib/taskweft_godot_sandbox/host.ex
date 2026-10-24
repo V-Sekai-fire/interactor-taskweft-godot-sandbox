@@ -9,7 +9,7 @@ defmodule TaskweftGodotSandbox.Host do
   and ticks it every Godot frame. Elixir reads step activity and
   `done_*` variables via the `LibGodot` behavior's `request/3`.
 
-  See RFD 2149. Runtime path is `TaskweftGodotSandbox.LibGodot.Real`;
+  See RFD66606-2149. Runtime path is `TaskweftGodotSandbox.LibGodot.Real`;
   tests default to `.Mock` and never spawn a real Godot.
   """
   use GenServer
